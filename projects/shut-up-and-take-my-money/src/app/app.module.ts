@@ -20,7 +20,7 @@ import { View1Component } from './view1/view1.component'
 export class AppModule { }
 
 @NgModule({})
-export class GoDeeperSharedModule{
+export class TakeMyMoneySharedModule{
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: AppModule,

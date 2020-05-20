@@ -149,9 +149,13 @@
               "projects/we-need-to-go-deeper/src/assets"
             ],
             "styles": [
-              "projects/we-need-to-go-deeper/src/styles.scss"
+              "projects/we-need-to-go-deeper/src/styles.scss",
+              "node_modules/bootstrap3/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap3/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery2/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -213,9 +217,13 @@
               "projects/we-need-to-go-deeper/src/assets"
             ],
             "styles": [
-              "projects/we-need-to-go-deeper/src/styles.scss"
+              "projects/we-need-to-go-deeper/src/styles.scss",
+              "node_modules/bootstrap3/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap3/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery2/dist/jquery.min.js"
+            ]
           }
         },
         "lint": {
@@ -240,6 +248,135 @@
           "configurations": {
             "production": {
               "devServerTarget": "we-need-to-go-deeper:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "shut-up-and-take-my-money": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/shut-up-and-take-my-money",
+      "sourceRoot": "projects/shut-up-and-take-my-money/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/shut-up-and-take-my-money",
+            "index": "projects/shut-up-and-take-my-money/src/index.html",
+            "main": "projects/shut-up-and-take-my-money/src/main.ts",
+            "polyfills": "projects/shut-up-and-take-my-money/src/polyfills.ts",
+            "tsConfig": "projects/shut-up-and-take-my-money/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/shut-up-and-take-my-money/src/favicon.ico",
+              "projects/shut-up-and-take-my-money/src/assets"
+            ],
+            "styles": [
+              "projects/shut-up-and-take-my-money/src/styles.scss",
+              "node_modules/bootstrap4/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap4/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery3/dist/jquery.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/shut-up-and-take-my-money/src/environments/environment.ts",
+                  "with": "projects/shut-up-and-take-my-money/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "shut-up-and-take-my-money:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "shut-up-and-take-my-money:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "shut-up-and-take-my-money:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/shut-up-and-take-my-money/src/test.ts",
+            "polyfills": "projects/shut-up-and-take-my-money/src/polyfills.ts",
+            "tsConfig": "projects/shut-up-and-take-my-money/tsconfig.spec.json",
+            "karmaConfig": "projects/shut-up-and-take-my-money/karma.conf.js",
+            "assets": [
+              "projects/shut-up-and-take-my-money/src/favicon.ico",
+              "projects/shut-up-and-take-my-money/src/assets"
+            ],
+            "styles": [
+              "projects/shut-up-and-take-my-money/src/styles.scss",
+              "node_modules/bootstrap4/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap4/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery3/dist/jquery.min.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/shut-up-and-take-my-money/tsconfig.app.json",
+              "projects/shut-up-and-take-my-money/tsconfig.spec.json",
+              "projects/shut-up-and-take-my-money/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/shut-up-and-take-my-money/e2e/protractor.conf.js",
+            "devServerTarget": "shut-up-and-take-my-money:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "shut-up-and-take-my-money:serve:production"
             }
           }
         }

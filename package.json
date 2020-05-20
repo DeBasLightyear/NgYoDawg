@@ -19,6 +19,10 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "bootstrap3": "npm:bootstrap@^3.4.1",
+    "bootstrap4": "npm:bootstrap@^4.5.0",
+    "jquery2": "npm:jquery@^2.2.4",
+    "jquery3": "npm:jquery@^3.5.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
