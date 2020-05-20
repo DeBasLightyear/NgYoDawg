@@ -28,9 +28,40 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "node_modules/bootstrap3/dist/css/bootstrap.min.css",
+                "bundleName": "bootstrap3-css",
+                "inject": false
+              },
+              {
+                "input": "node_modules/bootstrap4/dist/css/bootstrap.min.css",
+                "bundleName": "bootstrap4-css",
+                "inject": false
+              }
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "node_modules/bootstrap3/dist/js/bootstrap.min.js",
+                "bundleName": "bootstrap3-js",
+                "inject": false
+              },
+              {
+                "input": "node_modules/bootstrap4/dist/js/bootstrap.bundle.min.js",
+                "bundleName": "bootstrap4-js",
+                "inject": false
+              },
+              {
+                "input": "node_modules/jquery2/dist/jquery.min.js",
+                "bundleName": "jquery2",
+                "inject": false
+              },
+              {
+                "input": "node_modules/jquery3/dist/jquery.min.js",
+                "bundleName": "jquery3",
+                "inject": false
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -149,13 +180,9 @@
               "projects/we-need-to-go-deeper/src/assets"
             ],
             "styles": [
-              "projects/we-need-to-go-deeper/src/styles.scss",
-              "node_modules/bootstrap3/dist/css/bootstrap.min.css"
+              "projects/we-need-to-go-deeper/src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap3/dist/js/bootstrap.bundle.min.js",
-              "node_modules/jquery2/dist/jquery.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -217,13 +244,9 @@
               "projects/we-need-to-go-deeper/src/assets"
             ],
             "styles": [
-              "projects/we-need-to-go-deeper/src/styles.scss",
-              "node_modules/bootstrap3/dist/css/bootstrap.min.css"
+              "projects/we-need-to-go-deeper/src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap3/dist/js/bootstrap.bundle.min.js",
-              "node_modules/jquery2/dist/jquery.min.js"
-            ]
+            "scripts": []
           }
         },
         "lint": {
@@ -278,13 +301,9 @@
               "projects/shut-up-and-take-my-money/src/assets"
             ],
             "styles": [
-              "projects/shut-up-and-take-my-money/src/styles.scss",
-              "node_modules/bootstrap4/dist/css/bootstrap.min.css"
+              "projects/shut-up-and-take-my-money/src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap4/dist/js/bootstrap.bundle.min.js",
-              "node_modules/jquery3/dist/jquery.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -346,13 +365,9 @@
               "projects/shut-up-and-take-my-money/src/assets"
             ],
             "styles": [
-              "projects/shut-up-and-take-my-money/src/styles.scss",
-              "node_modules/bootstrap4/dist/css/bootstrap.min.css"
+              "projects/shut-up-and-take-my-money/src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap4/dist/js/bootstrap.bundle.min.js",
-              "node_modules/jquery3/dist/jquery.min.js"
-            ]
+            "scripts": []
           }
         },
         "lint": {
