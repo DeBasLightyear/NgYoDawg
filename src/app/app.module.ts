@@ -1,16 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { GoDeeperSharedModule } from '../../projects/we-need-to-go-deeper/src/app/app.module';
+
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { NavComponent } from './nav/nav.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoDeeperSharedModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
